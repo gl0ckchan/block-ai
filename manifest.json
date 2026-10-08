@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "БЛОКАЙ! - Blocks AI websites",
+  "version": "1.0",
+
+  "description": "БЛОКАЙ! - Blocks AI websites (ChatGPT, Deepseek, Grok, Gemini, Perplexity)",
+
+  "icons": {
+    "48": "icons/no-ai-48.svg",
+    "48": "icons/no-ai-32.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.chatgpt.com/*",
+        "*://*.deepseek.com/*",
+        "*://*.grok.com/*",
+        "*://*.gemini.google.com/*",
+        "*://*.perplexity.ai/*",
+        "*://*.claude.ai/*",
+        "*://*.midjourney.com/*",
+        "*://*.stability.ai/*",
+        "*://elevenlabs.io/*",
+        "*://www.anthropic.com/*",
+        "*://www.llama.com/",
+        "*://mistral.ai/",
+      ],
+      "js": ["blockai.js"]
+    }
+  ]
+}
